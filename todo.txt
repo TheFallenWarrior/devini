@@ -1,0 +1,49 @@
+#List items that were achieved are postceded with a '+'
+#List items that are under development are postceded with a '/'
+
+List of TODO things for Devini:
+
+* Read some C specifications to see what the hell's going on) /
+
+* Move <sys/*> folder into <kernel/*> +
+
+* Write other basic libc headers/libraries:
+	stdint.h /
+	stdbool.h +
+	math.h
+	assert.h +
+	stddef.h
+	stdarg.h
+	string.h /
+	...
+
+* Finish reorganizing source tree || library trees /
+
+* Add a kernel entry-point that calls main()
+
+* Reformat the code for readability || add comments /
+
+* Add suport for C++ on the header files: /
+	#ifdef __cplusplus
+	extern "C" {
+	#endif
+	...
+	#ifdef __cplusplus
+	}
+	#endif
+
+* Implement GDT, IRQs IRSs and other P R O T E C T E D  M O D E stuff
+
+* Implement a basic PS/2 keyboard driver, along with getc() and gets() implementations
+
+* Write a printf() function and set the code free from puts()'s evil dictatorship
+
+* Finish stdio.h (except for that file I/O part)
+
+* (MAYBE) Write a PS/2 mouse driver (or you could just tab your way through)
+
+* (MAYBE) Add floppy/hard disk support and FAT12/16/32 drivers
+
+* (MAYBE) Add a UNIX-like virtual filesystem
+
+* (MAYBE) Make it portable to ARM (should have been working on it from the begining)
