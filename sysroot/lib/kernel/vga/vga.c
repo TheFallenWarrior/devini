@@ -1,4 +1,5 @@
 #include <kernel/sys.h>
+#include <kernel/vga.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -42,7 +43,6 @@ void scroll(){ // scroll the text on screen
 
 void putch(unsigned char c){
     unsigned short *where;
-    unsigned att = attrib << 8;
 
     if(c == 0x08){ //Backspace
         if(csr_x != 0) csr_x--;
@@ -63,7 +63,7 @@ void putch(unsigned char c){
 
     else if(c >= ' '){ //Any printable character
         where = txtptr + (csr_y*80 + csr_x);
-        *where = c | att;
+        *where = c | attrib << 8;
         csr_x++;
     }
 
@@ -83,5 +83,5 @@ void settextcolor(unsigned char fg, unsigned char bg){
 void init_vga(){
     txtptr = (unsigned short *)0x0b8000;
     cls();
-    settextcolor(7, 0);
+    settextcolor(VGA_WHITE, VGA_BLACK);
 }

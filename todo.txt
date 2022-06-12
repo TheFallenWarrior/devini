@@ -1,11 +1,13 @@
-#List items that were achieved are postceded with a '+'
-#List items that are under development are postceded with a '/'
+#List items that were achieved are followed by a '+'
+#List items that are under development are followed by a '/'
 
 List of TODO things for Devini:
 
-* Read some C specifications to see what the hell's going on) /
+* Read some C specifications to see what the hell's going on /
 
 * Move <sys/*> folder into <kernel/*> +
+
+* Move sysroot/lib/kernel/ into src/kernel/
 
 * Write other basic libc headers/libraries:
 	stdint.h /

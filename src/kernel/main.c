@@ -1,4 +1,5 @@
 #include <kernel/vga.h>
+#include <kernel/sys.h>
 #include <stdio.h>
 
 #define VER_STR "Devini v0.0.0"
@@ -10,5 +11,6 @@ void main(){
     puts("\nBuild: "); puts(BUILD_STR); puts("\n\n");
     puts("VGA text-mode driver installed.\n");
 
-    for(;;);
+    cli();
+    hlt();
 }
